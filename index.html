@@ -276,9 +276,11 @@
           row.push(cell.trim());
           cell = "";
         } else if ((ch === "
-" || (ch === "" && next === "
+" || (ch === "
+" && next === "
 ")) && !inQuotes) {
-          if (ch === "") i++;
+          if (ch === "
+") i++;
           row.push(cell.trim());
           if (row.some(v => v !== "")) rows.push(row);
           row = [];
